@@ -7,7 +7,7 @@ The purpose of the project is estimating concentrations of compounds in biologic
 ![Example of serial dilution](https://github.com/AlessandradellaFazia/Estimating-Concentrations-in-Serial-Dilution-Assays/blob/main/images/elisa.jpg)
 
 
-The reposiory contains: 
+Specifically, the repository collects the following files: 
 
 - `SDSII Report Final Project della Fazia.Rmd`: R Markdown file containing the R code needed to reproduce the project, with text and graphic sections forming a data analysis document, readble with R Studio.
 - `dilution.dat`: The dataset used.
