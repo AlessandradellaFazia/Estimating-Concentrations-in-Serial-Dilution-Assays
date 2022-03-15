@@ -4,6 +4,12 @@ This repository contains code written for the final project of the Bayesian Stat
 
 The purpose of the project is estimating concentrations of compounds in biological samples using Bayesian hierarchical models within Markov Chain Monte Carlo (MCMC) simulation.
 
+A common approach for estimating concentrations of compounds in biological samples is the *serial dilution assay*, in which a small amount of sample (or solute) are serially diluted, mixing a amount of sample with a measured amount of a inert liquid. Then for each diluted samples we take a measurement.The relation between concetrations and measurements is non linear and therefore it is not suitable to weight the measurements equally. Moreover, different dilutions give measurements with different accuracy.
+
+The goal of the project is to estimates the concentration of a specific compound for a set of samples, using *standards* data (liquid solutions for which the concetration is known).
+
+Given the small number of measurement available, a Bayesian approach is used. This approach makes it possible to exploit knowledge from biology inserted through the priority function. 
+
 ![Example of serial dilution](https://github.com/AlessandradellaFazia/Estimating-Concentrations-in-Serial-Dilution-Assays/blob/main/images/elisa.jpg)
 
 
