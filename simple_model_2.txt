@@ -1,0 +1,52 @@
+# equal variance for each sample y_i 
+
+
+model{
+# 1 : 94 
+  for (i in 1:(zero_conc_from - 1) ) {
+    
+    y[i] ~ dnorm(expect[i], prec[i])   
+    
+     expect[i] <- exp(logb1) + ( (exp(logb2)) /  (1 + pow(d[i]*exp(loggamma[index[i]]) , -exp(logb4)) ) )
+
+     prec[i] <- precision_y
+  } 
+# 95: 96
+   for (i in zero_conc_from : zero_conc_to) {
+    
+    # if the dilution coeff. d_i is 0 
+    
+    y[i] ~ dnorm(expect[i], prec[i])
+    
+    expect[i] <- exp(logb1) 
+    
+    prec[i] <- precision_y
+  }  
+
+  for (j in 1:11) {
+   loggamma[j] ~ dunif(-1000,1000)	
+   }
+  
+  # priors
+  logb1 ~ dunif(-1000,1000)
+  logb2 ~  dunif(-1000,1000)  
+  logb4~ dunif(-1000,1000)
+
+  precision_y ~ dgamma(0.001, 0.001) 
+
+  # transformation to orginal scale
+  b1 <- exp(logb1)
+  b2 <- exp(logb2)
+  b4 <- exp(logb4)
+
+  b3 <- 0.64/exp(loggamma[11])
+  sd_y <- 1 / sqrt(precision_y)
+
+  for (j in 1:10) {
+   theta[j] <- exp(loggamma[j]) * b3
+   }
+}
+
+
+
+
