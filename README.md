@@ -1,10 +1,12 @@
 # Estimating-Concentrations-in-Serial-Dilution-Assays
+
+This repository contains code written for the final project of the Bayesian Statistical Methods course, at Sapienza University of Rome.
 The purpose of the project is estimating concentrations of compounds in biological samples using Bayesian hierarchical models within Markov Chain Monte Carlo (MCMC) simulation.
 ![Example of serial dilution](https://github.com/AlessandradellaFazia/Estimating-Concentrations-in-Serial-Dilution-Assays/blob/main/images/elisa.jpg)
 
 The reposiory contains: 
 
-- SDSII Report Final Project della Fazia.Rmd: R Markdown file containing the R code needed to reproduce the project, with text and graphic sections forming a data analysis document, readble with R Studio.
+- `SDSII Report Final Project della Fazia.Rmd`: R Markdown file containing the R code needed to reproduce the project, with text and graphic sections forming a data analysis document, readble with R Studio.
 - dilution.dat The dataset used.
 - R_Project.Rproj: project file of R Studio.
 - .RData file: load the data and values of the variables into R.
